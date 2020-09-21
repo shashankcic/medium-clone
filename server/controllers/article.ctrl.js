@@ -50,7 +50,7 @@ module.exports = {
   clapArticle: (req, res, next) => {
     Article.findById(req.body.article_id).then((article) => {
       return article.clap().then(() => {
-        return res.json({msg: 'Done'});
+        return res.json({msg: "Done"});
       });
     }).catch(next);
   },
@@ -60,7 +60,7 @@ module.exports = {
         author: req.body.author_id,
         text: req.body.comment
       }).then(() => {
-        return res.json({msg: 'Done'});
+        return res.json({msg: "Done"});
       });
     }).catch(next);
   },
